@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="unit_view_form" model="ir.ui.view">
+    <field name="name">unit form</field>
+    <field name="model">contract_management.unit</field>
+    <field name="arch" type="xml">
+        <form>
+                <sheet string="property unit">
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="unit_no" />
+                            <field name="unit_usage_id" />
+                            <field name="unit_subtype_id" />
+                            <field name="suit_area_size"/>
+                            <field name="common_area_size"/>
+                            <field name="approval_ref_no"/>
+                        </group>
+                        <group>
+                            <field name="building_id" />
+                            <field name="floor_no"/>
+                            <field name="unit_type_id" />
+                            <field name="status"/>
+                            <field name="total_area_size"/>
+                            <field name="reference_no"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <group>
+                        <separator/>
+                    </group>
+                </sheet>
+
+            </form>
+    </field>
+</record>
+
+
+
+
+
+
+
+
+</odoo>

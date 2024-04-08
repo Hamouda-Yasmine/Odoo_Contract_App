@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project,access_project,model_contract_management_project,,1,1,1,1
+access_building,access_building,model_contract_management_building,,1,1,1,1
+access_contract,access_contract,model_contract_management_contract,,1,1,1,1
+access_unit,access_unit,model_contract_management_unit,,1,1,1,1
+access_buildingtype,access_buildingtype,model_contract_management_building_type,,1,1,1,1

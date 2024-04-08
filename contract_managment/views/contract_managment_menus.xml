@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record  id="project_action" model="ir.actions.act_window">
+      <field name="name">
+          Project action
+      </field>
+         <field name="res_model">contract_management.project</field>
+     </record>
+
+     <record  id="building_action" model="ir.actions.act_window">
+      <field name="name">
+          Building action
+      </field>
+         <field name="res_model">contract_management.building</field>
+     </record>
+
+     <record  id="contract_action" model="ir.actions.act_window">
+      <field name="name">
+          Contract action
+      </field>
+         <field name="res_model">contract_management.contract</field>
+     </record>
+
+     <record  id="unit_action" model="ir.actions.act_window">
+      <field name="name">
+          Unit action
+      </field>
+         <field name="res_model">contract_management.contract</field>
+     </record>
+
+    <menuitem id="contract_management_menu_root"
+        name="Contract management"
+        active="True"
+       />
+
+           <menuitem id="property_project_menu"
+                  name="Project"
+                  parent="contract_management_menu_root"
+                  action="project_action"
+                   />
+          
+           <menuitem id="property_building_menu"
+                  name="Building"
+                  parent="contract_management_menu_root"
+                  action="building_action"
+                   />
+
+           <menuitem id="property_contract_menu"
+                  name="Contract"
+                  parent="contract_management_menu_root"
+                  action="contract_action"
+                   />
+
+           <menuitem id="property_unit_menu"
+                  name="Unit"
+                  parent="contract_management_menu_root"
+                  action="unit_action"
+                   />
+          
+
+
+
+
+        
+
+
+</odoo>
