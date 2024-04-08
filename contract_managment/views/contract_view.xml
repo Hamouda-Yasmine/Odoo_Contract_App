@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="contract_view_form" model="ir.ui.view">
+        <field name="name">contract form</field>
+        <field name="model">contract_management.contract</field>
+        <field name="arch" type="xml">
+    <form>
+
+        <sheet string="contract form">
+                     <group>
+                        <group>
+                            <field name="code" />
+                            <field name="company_id" />
+                            <field name="currency_id" />
+                            <field name="date" />
+
+                            <field name="date_start" />
+                            <field name="date_stop" />
+                        </group>
+                        <group>
+                            <field name="notes" />
+
+                            <field name="unit_id"/>
+                            <field name="active"/>
+
+                        </group>
+  </group>
+                    <group>
+                        <separator/>
+                    </group>
+
+                </sheet>
+    </form>
+        </field>
+    </record>
+
+
+
+
+
+
+
+</odoo>

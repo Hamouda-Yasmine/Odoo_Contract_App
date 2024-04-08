@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="project_view_form" model="ir.ui.view">
+    <field name="name">project form</field>
+    <field name="model">contract_management.project</field>
+    <field name="arch" type="xml">
+        <form>
+                <sheet string="project form">
+                     <group>
+                        <group>
+                            <field name="name" />
+                            <field name="owner" />
+
+                            <field name="managed_by" />
+                            <field name="maintained_by" />
+
+
+                        </group>
+                        <group>
+                            <field name="state_id" />
+
+
+                            <field name="active"/>
+
+                        </group>
+  </group>
+                    <group>
+                        <separator/>
+                    </group>
+
+                </sheet>
+
+            </form>
+    </field>
+</record>
+  
+
+
+
+
+
+
+
+</odoo>

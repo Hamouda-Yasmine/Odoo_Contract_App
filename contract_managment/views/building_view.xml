@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="building_view_form" model="ir.ui.view">
+        <field name="name">building form</field>
+        <field name="model">contract_management.building</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet string="form building">
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="project_id"/>
+                            <field name="hold_type_id" widget="radio" options="{&quot;horizontal&quot;:true}" field_id="hold_type_id_0"/>
+                            <field name="state_id" />
+                            <field name="city_id" />
+                            <field name="land_no_id"/>
+
+                            <field name="building_name"/>
+                            <field name="arabic_name"/>
+                            <field name="ejari_building_name" />
+                            <field name="ejari_building_name_arabic" />
+                            <field name="address" />
+
+                            <field name="completion_date"/>
+                            <field name="building_usage_ids" widget="many2many_checkboxes" no_open="True" required="True" can_create="True" can_write="True" field_id="building_usage_ids_0"/>
+                             <field name="activity_state" placeholder="selecy state" required="True" field_id="activity_state_0"/>
+                            <field name="building_type_id" />
+                        </group>
+                        <group>
+                            <field name="floor_count"/>
+
+                            <field name="buid_area_size"/>
+
+                            <field name="leasable_area_size"/>
+                            <field name="commom_area_size"/>
+                            <field name="ejari_building_area_size" />
+                            <field name="ejari_common_area_size" />
+                            <field name="ejari_leasable_area_size" />
+                            <field name="approval_ref_no"/>
+                            <field name="city_id"/>
+
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <group>
+                        <separator/>
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+ 
+
+
+
+
+
+
+</odoo>
