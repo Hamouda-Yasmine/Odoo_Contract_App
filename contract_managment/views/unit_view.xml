@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <record id="unit_tree_view" model="ir.ui.view">
+    <field name="name">unit.tree</field>
+    <field name="model">contract_management.unit</field>
+    <field name="arch" type="xml">
+        <tree string="Unit">
+            <field name="name"/>
+
+            <field name="reserved"/>
+            <!-- Add more fields as needed -->
+        </tree>
+    </field>
+</record>
+
     <record id="unit_view_form" model="ir.ui.view">
         <field name="name">unit form</field>
         <field name="model">contract_management.unit</field>
@@ -10,19 +23,17 @@
                         <group>
                             <field name="name"/>
                             <field name="unit_no"/>
-
                             <field name="suit_area_size"/>
                             <field name="common_area_size"/>
                             <field name="approval_ref_no"/>
                         </group>
                         <group>
-
                             <field name="floor_no"/>
-
                             <field name="status"/>
                             <field name="total_area_size"/>
                             <field name="reference_no"/>
-                            <field name="active" widget="boolean_toggle"/>
+                            <field name="reserved" widget="boolean_toggle"/>
+
                         </group>
                     </group>
                     <group>

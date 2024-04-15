@@ -2,28 +2,28 @@
 <odoo>
         <record  id="project_action" model="ir.actions.act_window">
       <field name="name">
-          Project action
+          Project
       </field>
          <field name="res_model">contract_management.project</field>
      </record>
 
      <record  id="building_action" model="ir.actions.act_window">
       <field name="name">
-          Building action
+          Building
       </field>
          <field name="res_model">contract_management.building</field>
      </record>
 
      <record  id="contract_action" model="ir.actions.act_window">
       <field name="name">
-          Contract action
+          Contract
       </field>
          <field name="res_model">contract_management.contract</field>
      </record>
 
      <record  id="unit_action" model="ir.actions.act_window">
       <field name="name">
-          Unit action
+          Unit
       </field>
          <field name="res_model">contract_management.unit</field>
      </record>

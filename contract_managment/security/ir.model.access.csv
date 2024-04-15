@@ -5,3 +5,4 @@ access_contract,access_contract,model_contract_management_contract,,1,1,1,1
 access_unit,access_unit,model_contract_management_unit,,1,1,1,1
 access_buildingtype,access_buildingtype,model_contract_management_building_type,,1,1,1,1
 access_buildingusage,access_buildingusage,model_building_usage,,1,1,1,1
+access_contractstage,access_contractstage,model_contract_management_contract_stage,,1,1,1,1

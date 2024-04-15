@@ -6,7 +6,7 @@ class Building(models.Model):
     
      
     address=fields.Char(string='Address',required=True)
-    activity_state = fields.Selection(string='Activity State', selection=[('Overdue', 'overdue'), ('Today', 'today')],required=True)
+    activity_state=fields.Selection(string='Activity State',selection=[('Overdue','overdue'),('Today','today')],required=True)
     name=fields.Char(string='Code',required=True)
     approval_ref_no=fields.Char(string='Approval Ref No',required=True)
     arabic_name=fields.Char(string='Arabic Name',required=True)
@@ -14,7 +14,8 @@ class Building(models.Model):
     building_name=fields.Char(string='Building Name',required=True)
     building_type_id=fields.Many2one('contract_management.building.type',String='Building Type',required=True)
     building_usage_ids=fields.Many2many('building.usage',String='Building Usage',required=True)
-    project_id=fields.Many2one('contract_management.project' ,required=True ,string='Project ID')
+
+    project_id=fields.Many2one('contract_management.project',String='Project',required=True)
 
     city_id=fields.Many2one('res.city',string='Area',required=True)
     commom_area_size=fields.Float(string='Commom Area (Sq. m)',required=True)

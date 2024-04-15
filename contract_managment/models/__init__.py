@@ -7,6 +7,5 @@ from . import building_usage
 from . import contract_stage
 from . import unit_subtype
 from . import unit_type
-from . import  unit_usage
+from . import unit_usage
 from . import sale_order
-

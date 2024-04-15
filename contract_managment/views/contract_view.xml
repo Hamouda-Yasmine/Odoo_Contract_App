@@ -1,43 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <record id="contract_tree_view" model="ir.ui.view">
+        <field name="name">contract.tree</field>
+        <field name="model">contract_management.contract</field>
+        <field name="arch" type="xml">
+            <tree string="Contract">
+                <field name="name"/>
+                <field name="company_id"/>
+
+
+                <!-- Add more fields as needed -->
+            </tree>
+        </field>
+    </record>
     <record id="contract_view_form" model="ir.ui.view">
         <field name="name">contract form</field>
         <field name="model">contract_management.contract</field>
         <field name="arch" type="xml">
-    <form>
+            <!--<form>
+                <header>
+                    <field name="stage_id" widget="statusbar" options="{'clickable': '1'}"/>
+                </header>
+                <sheet string="contract form">
+                    <field name="kanban_state" widget="state_selection"/>
+                    <widget name="web_ribbon" text="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group name="studio_group_3560bb">
+                        <group name="unit_info" string="Unit Info">
+                            <field name="unit_id" domain="[('reserved', '=', False)]"/>
+                            <field name="company_id"/>
+                            <field name="currency_id"/>
 
-        <sheet string="contract form">
-                     <group>
-                        <group>
-                            <field name="code" />
-                            <field name="company_id" />
-                            <field name="currency_id" />
-                            <field name="date" />
 
-                            <field name="date_start" />
-                            <field name="date_stop" />
                         </group>
-                        <group>
-                            <field name="notes" />
-
-                            <field name="unit_id"/>
-                            <field name="active"/>
+                        <group name="contract_dates" string="Contract Dates">
+                            <field name="date"/>
+                            <field name="date_start" string="Dates" widget="daterange"
+                                   options="{'end_date_field': 'date_stop'}"/>
+                            <field name="date_stop" invisible="1"/>
+                        </group>
+                    </group>
+                    <group name="studio_group_4b9_1hpq9o3pl">
+                        <group name="contact_pricing" string="Pricing">
+                            <field name="period"/>
+                            <field name="period_nbr"/>
+                            <field name="currency_id" invisible="1"/>
 
                         </group>
-  </group>
+                        <group name="studio_group_4b9_right"/>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" placeholder="Type down your notes here..." nolabel="1" colspan="2"/>
+                    </group>
+                    <button name="confirm_contract" string="Confirm" type="object" class="btn-primary"/>
                     <group>
                         <separator/>
                     </group>
 
                 </sheet>
-    </form>
+            </form>-->
+            <form>
+
+                <sheet string="contract form">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="company_id"/>
+                            <field name="currency_id"/>
+                            <field name="date_start" string="Dates" widget="daterange"
+                                   options="{'end_date_field': 'date_stop'}"/>
+                            <field name="date_stop" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="notes"/>
+
+                             <field name="unit_id" domain="[('reserved', '=', False)]"/>
+                            <field name="active"/>
+
+                        </group>
+                    </group>
+                    <button name="confirm_contract" string="Confirm" type="object" class="btn-primary"/>
+                    <group>
+                        <separator/>
+                    </group>
+
+                </sheet>
+            </form>
         </field>
     </record>
-
-
-
-
-
 
 
 </odoo>
